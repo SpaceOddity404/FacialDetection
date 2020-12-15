@@ -9,8 +9,6 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 faces = faceCascade.detectMultiScale(gray, scaleFactor = 1.1, minNeighbors = 4, minSize=(30, 30))
 
-print("Found {0} Faces!".format(len(faces)))
-
 for (x, y, w, h) in faces:
     cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
